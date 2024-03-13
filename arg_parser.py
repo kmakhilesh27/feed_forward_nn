@@ -4,8 +4,8 @@ def create_parser():
     parser = argparse.ArgumentParser()
 
     # Weights & Biases configuration
-    parser.add_argument('-wp', '--wandb_project', default='myprojectname', help="project name used to track experiments in weights & biases dashboard")
-    parser.add_argument('-we', '--wandb_entity', default='myname', help="wandb entity used to track experiments in the weights & biases dashboard.")
+    parser.add_argument('-wp', '--wandb_project', default='CS6910_Assignment_1', help="project name used to track experiments in weights & biases dashboard")
+    parser.add_argument('-we', '--wandb_entity', default='ge23m019', help="wandb entity used to track experiments in the weights & biases dashboard.")
 
     # Dataset configuration
     parser.add_argument('-d', '--dataset', choices=["mnist", "fashion_mnist"], default='fashion_mnist', help="dataset loader: choices = ['mnist', 'fashion_mnist']")
