@@ -25,14 +25,14 @@ def create_parser():
     parser.add_argument('-beta1', '--beta1', type=float, default=0.5, help="beta1 for adam and nadam optimizers")
     parser.add_argument('-beta2', '--beta2', type=float, default=0.5, help="beta2 for adam and nadam optimizers")
     parser.add_argument('-eps', '--epsilon', type=float, default=0.000001, help="epsilon for optimizers")
-    parser.add_argument('-w_d', '--weight_decay', type=float, default=0.0, help="weight decay for optimizers (L2 regularization)")
+    parser.add_argument('-wd', '--weight_decay', type=float, default=0.0, help="weight decay for optimizers (L2 regularization)")
 
     # Weight initialization
-    parser.add_argument('-w_i', '--weight_init', choices=["random", "xavier"], default='random', help="weight initialization method: choices = ['random', 'xavier']")
+    parser.add_argument('-wi', '--weight_init', choices=["random", "xavier"], default='random', help="weight initialization method: choices = ['random', 'xavier']")
 
     # Neural network architecture
     parser.add_argument('-nhl', '--num_layers', type=int, default=1, help="number of hidden layers")
-    parser.add_argument('-sz', '--hidden_size', type=list, default=[4], help="hidden layer size: [h1, h2...., hn]")
-    parser.add_argument('-a', '--activation', choices=["identity", "sigmoid", "tanh", "ReLU"], default='sigmoid', help="activation function: choices = ['identity', 'sigmoid', 'tanh', 'ReLU']")
+    parser.add_argument('-sz', '--hidden_size', type=int, default=4, help="hidden layer size")
+    parser.add_argument('-a', '--activation', choices=["identity", "sigmoid", "tanh", "relu"], default='sigmoid', help="activation function: choices = ['identity', 'sigmoid', 'tanh', 'relu']")
 
     return parser
