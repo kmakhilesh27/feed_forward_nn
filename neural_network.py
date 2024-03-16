@@ -1,18 +1,17 @@
 import numpy as np
 from sklearn.model_selection import train_test_split
-from tqdm import tqdm as tq
-from tqdm.notebook import tqdm_notebook as tqnb
-
+from tqdm import tqdm
+import wandb
 # Set the random seed for numpy for reproducibility
 np.random.seed(42)
  
 class FeedForwardNN:
     
-    def __init__(self, input_size:int, num_hidden_layers:int, hidden_size:list, output_size:int, weight_initializer):
+    def __init__(self, input_size:int, num_hidden_layers:int, hidden_size:int, output_size:int, weight_initializer):
         
         self.in_dims = input_size             # size of the input layer: 784      
         self.n_hidden = num_hidden_layers     # num of hidden layers in the network (excluding output layer)
-        self.h_dims = hidden_size             # size of the hidden layers: list of integers [h1, h2, ....]
+        self.h_dims = hidden_size             # size of the hidden layers: integer
         self.out_dims = output_size           # size of the output layer: 10       
 
         self.layers = self.n_hidden + 1        
@@ -89,25 +88,25 @@ class FeedForwardNN:
         params = {}
         if choice == "random":
             # parameters for the first hidden layer
-            params["W1"] = self._random_init((self.in_dims, self.h_dims[0]))
-            params["b1"] = np.zeros((1, self.h_dims[0]))
+            params["W1"] = self._random_init((self.in_dims, self.h_dims))
+            params["b1"] = np.zeros((1, self.h_dims))
             # parameters from the second hidden layer to last hidden layer
             for i in range(1,self.layers - 1):
-                params["W"+str(i+1)] = self._random_init((self.h_dims[i-1],self.h_dims[i]))
-                params["b"+str(i+1)] = np.zeros((1, self.h_dims[i]))
+                params["W"+str(i+1)] = self._random_init((self.h_dims,self.h_dims))
+                params["b"+str(i+1)] = np.zeros((1, self.h_dims))
             # parameters for the output layer
-            params["W"+str(self.layers)] = self._random_init((self.h_dims[-1], self.out_dims))
+            params["W"+str(self.layers)] = self._random_init((self.h_dims, self.out_dims))
             params["b"+str(self.layers)] = np.zeros((1, self.out_dims))
-        elif choice == "xavier" or choice == "Xavier":
+        elif choice == "xavier":
             # parameters for the first hidden layer
-            params["W1"] = self._xavier_init((self.in_dims, self.h_dims[0]))
-            params["b1"] = np.zeros((1, self.h_dims[0]))
+            params["W1"] = self._xavier_init((self.in_dims, self.h_dims))
+            params["b1"] = np.zeros((1, self.h_dims))
             # parameters from the second hidden layer to last hidden layer
             for i in range(1,self.layers - 1):
-                params["W"+str(i+1)] = self._xavier_init((self.h_dims[i-1],self.h_dims[i]))
-                params["b"+str(i+1)] = np.zeros((1, self.h_dims[i]))
+                params["W"+str(i+1)] = self._xavier_init((self.h_dims,self.h_dims))
+                params["b"+str(i+1)] = np.zeros((1, self.h_dims))
             # parameters for the output layer
-            params["W"+str(self.layers)] = self._xavier_init((self.h_dims[-1], self.out_dims))
+            params["W"+str(self.layers)] = self._xavier_init((self.h_dims, self.out_dims))
             params["b"+str(self.layers)] = np.zeros((1, self.out_dims))
         
         else:
@@ -137,7 +136,7 @@ class FeedForwardNN:
                 self.activations["A"+str(i)] = np.dot(self.activations["H"+str(i-1)],self.parameters["W"+str(i)]) + self.parameters["b"+str(i)]
                 self.activations["H"+str(i)] = self._tanh(self.activations["A"+str(i)])
 
-        elif activ_fn == 'ReLU':
+        elif activ_fn == 'relu':
             for i in range(1, self.layers):
                 self.activations["A"+str(i)] = np.dot(self.activations["H"+str(i-1)],self.parameters["W"+str(i)]) + self.parameters["b"+str(i)]
                 self.activations["H"+str(i)] = self._relu(self.activations["A"+str(i)])
@@ -160,13 +159,15 @@ class FeedForwardNN:
         # Compute loss w.r.t. the given loss function
         if loss_fn == 'cross_entropy':
             loss = self._cross_entropy(Y, self.y_hat) / num_samples
-        else:
+        elif loss_fn == 'mean_squared_error':
             loss = self._mean_squared_error(Y, self.y_hat) / num_samples
+        else:
+            raise Exception("NotImplementedError: Invalid Loss Function.")
         
         if no_grad == True:
             return loss
                 
-        # Compute gradient w.r.t. the output (with respect to Softmax loss)
+        # Compute gradient w.r.t. the output (Softmax loss)
         grad['dA'+str(self.layers)] = self.y_hat - Y  
 
         for k in range(self.layers, 0, -1):
@@ -184,7 +185,7 @@ class FeedForwardNN:
                 grad['dA'+str(k-1)] = np.multiply(grad['dH'+str(k-1)],self._d_identity(self.activations['A'+str(k-1)]))
             elif activ_fn == 'tanh':
                 grad['dA'+str(k-1)] = np.multiply(grad['dH'+str(k-1)],self._d_tanh(self.activations['A'+str(k-1)]))
-            elif activ_fn == 'ReLU':
+            elif activ_fn == 'relu':
                 grad['dA'+str(k-1)] = np.multiply(grad['dH'+str(k-1)],self._d_relu(self.activations['A'+str(k-1)]))
             else:
                 raise Exception("NotImplementedError: Invalid Activation Function.")
@@ -232,26 +233,25 @@ class FeedForwardNN:
             if 'v_dW'+str(i) not in self.V:
                 self.V['v_dW'+str(i)] = np.zeros_like(self.parameters['W'+str(i)])
                 self.V['v_db'+str(i)] = np.zeros_like(self.parameters['b'+str(i)])
-            
+        
             self.V['v_dW'+str(i)] = momentum * self.V['v_dW'+str(i)] - lr * grad['dW'+str(i)]
             self.V['v_db'+str(i)] = momentum * self.V['v_db'+str(i)] - lr * np.sum(grad['db'+str(i)], axis=0, keepdims=True)
-            
+        
             self.parameters['W'+str(i)] += self.V['v_dW'+str(i)]
-            self.parameters['b'+str(i)] += np.sum(self.V['v_db'+str(i)], axis = 0, keepdims=True)
-
-
+            self.parameters['b'+str(i)] += np.sum(self.V['v_db'+str(i)], axis=0, keepdims=True)
+            
     def _rmsprop_update(self, grad, lr, beta, epsilon):
         self.V = {}
         for i in range(1, self.layers + 1):
-            if 's_dW'+str(i) not in self.V:
-                self.V['s_dW'+str(i)] = np.zeros_like(self.parameters['W'+str(i)])
-                self.V['s_db'+str(i)] = np.zeros_like(self.parameters['b'+str(i)])
+            if 'v_dW'+str(i) not in self.V:
+                self.V['v_dW'+str(i)] = np.zeros_like(self.parameters['W'+str(i)])
+                self.V['v_db'+str(i)] = np.zeros_like(self.parameters['b'+str(i)])
 
-            self.V['s_dW'+str(i)] = beta * self.V['s_dW'+str(i)] + (1 - beta) * np.square(grad['dW'+str(i)])
-            self.V['s_db'+str(i)] = beta * self.V['s_db'+str(i)] + (1 - beta) * np.square(grad['db'+str(i)])
+            self.V['v_dW'+str(i)] = beta * self.V['v_dW'+str(i)] + (1 - beta) * np.square(grad['dW'+str(i)])
+            self.V['v_db'+str(i)] = beta * self.V['v_db'+str(i)] + (1 - beta) * np.square(grad['db'+str(i)])
 
-            self.parameters['W'+str(i)] -= lr * grad['dW'+str(i)] / (np.sqrt(self.V['s_dW'+str(i)]) + epsilon)
-            self.parameters['b'+str(i)] -= lr * np.sum(grad['db'+str(i)], axis=0, keepdims=True) / (np.sqrt(self.V['s_db'+str(i)]) + epsilon)
+            self.parameters['W'+str(i)] -= lr * grad['dW'+str(i)] / (np.sqrt(self.V['v_dW'+str(i)] + epsilon))
+            self.parameters['b'+str(i)] -= lr * np.sum(grad['db'+str(i)], axis=0, keepdims=True) / (np.sqrt(np.sum(self.V['v_db'+str(i)], axis=0, keepdims=True) + epsilon))
 
     def _adam_update(self, grad, lr, beta1, beta2, time_step, epsilon):        
         self.V = {}
@@ -296,82 +296,6 @@ class FeedForwardNN:
 
             self.parameters['W'+str(i)] -= lr * (beta1 * m_dW_hat + (1 - beta1) * grad['dW'+str(i)]) / (np.sqrt(v_dW_hat) + epsilon)
             self.parameters['b'+str(i)] -= np.sum(lr * (beta1 * m_db_hat + (1 - beta1) * grad['db'+str(i)]), axis = 0, keepdims=True) / (np.sqrt(v_db_hat) + epsilon)
-    
-    #########################################################################################################################
-    '''TRAIN FUNCTION'''
-        
-    def train(self, args, X_train, Y_train):
-        """
-        Extract the arguments passed from the CLI.
-
-        args = {'wandb_project': 'myprojectname', 'wandb_entity': 'myname', 'dataset': 'fashion_mnist',
-                'epochs': 1, 'batch_size': 4, 'loss': 'cross_entropy', 'optimizer': 'sgd', 'learning_rate': 0.1,
-                'momentum': 0.5, 'beta': 0.5, 'beta1': 0.5, 'beta2': 0.5, 'epsilon': 1e-06, 'weight_decay': 0.0,
-                'weight_init': 'random', 'num_layers': 1, 'hidden_size': 4, 'activation': 'sigmoid'}
-
-        """
-        epochs = args['epochs']
-        batch_size = args['batch_size']
-        lossfn = args['loss']
-        optimizer = args['optimizer']
-        lr = args['learning_rate']
-        momentum = args['momentum']
-        beta = args['beta']
-        beta1 = args['beta1']
-        beta2 = args['beta2']
-        eps = args['epsilon']
-        weight_decay = args['weight_decay']        
-        activationfn = args['activation']
-
-        # Lists to accumulate the losses over each epoch (size: num_epochs)
-        self.training_loss = [] 
-        self.validation_loss = []
-
-        # Split the dataset into training and validation sets
-        x_train, x_val, y_train, y_val = train_test_split(X_train, Y_train, test_size=0.1, random_state=42)         
-        print(x_train.shape, x_val.shape, y_train.shape, y_val.shape)
-        num_samples = len(x_train)
-
-        for epoch in range(1, epochs + 1):
-
-            # Randomly shuffle the training data
-            indices = np.arange(num_samples)
-            np.random.shuffle(indices)
-
-            print(f"---------- Epoch: {epoch} ----------")
-        
-            for start in range(0, num_samples, batch_size):
-                end = min(start + batch_size, num_samples)
-                batch_indices = indices[start:end]
-
-                # Forward Propagation
-                x_batch = x_train[batch_indices]
-                y_batch = y_train[batch_indices]
-                
-                y_pred_train = self.forward_propagation(x_batch, activ_fn=activationfn)
-                train_accuracy = self._calculate_accuracy(y_batch, y_pred_train)                         
-
-                # Backward Propagation
-                train_loss = self.backward_propagation(epoch, x_batch, y_batch, optimizer = optimizer, lr=lr, momentum=momentum,
-                                                 beta=beta, beta1=beta1, beta2=beta2, epsilon=eps,
-                                                 loss_fn = lossfn, activ_fn = activationfn, no_grad=False)
-                
-                # Predictions and accuracy on the Validation Set (x_val, y_val)
-                y_pred_val = self.forward_propagation(x_val, activ_fn=activationfn)
-                val_accuracy = self._calculate_accuracy(y_val, y_pred_val)
-                val_loss = self.backward_propagation(epoch, x_val, y_val, optimizer = optimizer, lr=lr, momentum=momentum,
-                                                 beta=beta, beta1=beta1, beta2=beta2, epsilon=eps,
-                                                 loss_fn = lossfn, activ_fn = activationfn, no_grad=True)
-                
-                self.training_loss.append(train_loss)                
-                self.validation_loss.append(val_loss)
-
-            if epoch % 5 == 0:
-                print(f"Training  : Epoch {epoch}, Loss: {train_loss:.4f}, Accuracy: {train_accuracy:.4f}")
-                print(f"Validation: Epoch {epoch}, Loss: {val_loss:.4f}, Accuracy: {val_accuracy:.4f}")
-
-            #wandb.log({'train loss': train_loss, 'train accuracy': train_accuracy * 100, 'epoch': epoch})
-            #wandb.log({'val_accuracy': val_accuracy * 100})
 
     #########################################################################################################################
     '''CALCULATE ACCURACY'''
@@ -388,15 +312,16 @@ class FeedForwardNN:
     #########################################################################################################################
     '''PREDICTIONS'''
 
-    def predict(self, x_test, y_test, activationfn):        
+    def predict(self, x_test, y_test, activation_fn):        
 
-        y_pred = self.forward_propagation(x_test, activ_fn=activationfn)
+        y_pred = self.forward_propagation(x_test, activ_fn=activation_fn)
         accuracy = self._calculate_accuracy(y_test, y_pred)
 
+        #print(f"Number of Samples in Test Set: {x_test.shape[0]}")
         print(f"Test Accuracy: {accuracy:.4f}")
 
     #########################################################################################################################
-    '''GET() METHODS TO EXTRACT VARIABLES FROM THE CLASS'''
+    '''GET METHODS'''
     def get_parameters(self):
         return self.parameters    
 
@@ -406,4 +331,69 @@ class FeedForwardNN:
     def get_validation_loss(self):
         return self.validation_loss
     
+    def get_training_accuracy(self):
+        return self.train_acc
+
+    def get_validation_accuracy(self):
+        return self.val_acc
     
+    #########################################################################################################################
+    '''TRAIN FUNCTION'''
+        
+    def train(self, X_train, Y_train, epochs, batch_size, lossfn, optimizer, lr, momentum,
+              beta, beta1, beta2, eps, weight_decay, activationfn):  
+
+        # Lists to accumulate the losses over each epoch (size: num_epochs)
+        self.training_loss = [] 
+        self.validation_loss = []
+        self.train_acc = []
+        self.val_acc = []
+
+        # Split the dataset into training and validation sets
+        x_train, x_val, y_train, y_val = train_test_split(X_train, Y_train, test_size=0.1, random_state=42)         
+        
+        num_samples = len(x_train)
+
+        for epoch in range(1, epochs + 1):
+
+            # Randomly shuffle the training data
+            indices = np.arange(num_samples)
+            np.random.shuffle(indices)
+
+            print(f"**********Training Epoch: {epoch}**********")
+        
+            for start in tqdm(range(0, num_samples, batch_size)):
+                end = min(start + batch_size, num_samples)
+                batch_indices = indices[start:end]
+
+                x_batch = x_train[batch_indices]
+                y_batch = y_train[batch_indices]
+
+
+                y_pred_train = self.forward_propagation(x_batch, activ_fn=activationfn)
+                train_accuracy = self._calculate_accuracy(y_batch, y_pred_train)
+                train_loss = self.backward_propagation(epoch, x_batch, y_batch, optimizer = optimizer, lr=lr, momentum=momentum,
+                                                 beta=beta, beta1=beta1, beta2=beta2, epsilon=eps,
+                                                 loss_fn = lossfn, activ_fn = activationfn, no_grad=False)
+                
+                y_pred_val = self.forward_propagation(x_val, activ_fn=activationfn)
+                val_accuracy = self._calculate_accuracy(y_val, y_pred_val)
+                val_loss = self.backward_propagation(epoch, x_val, y_val, optimizer = optimizer, lr=lr, momentum=momentum,
+                                                 beta=beta, beta1=beta1, beta2=beta2, epsilon=eps,
+                                                 loss_fn = lossfn, activ_fn = activationfn, no_grad=True)
+                
+                self.training_loss.append(train_loss)                
+                self.validation_loss.append(val_loss)
+                self.train_acc.append(train_accuracy)
+                self.val_acc.append(val_accuracy)
+
+            #if epoch % 5 == 0:
+            print(f"Training  : Epoch {epoch}, Loss: {train_loss:.4f}, Accuracy: {train_accuracy:.4f}")
+            print(f"Validation: Epoch {epoch}, Loss: {val_loss:.4f}, Accuracy: {val_accuracy:.4f}")
+
+            wandb.log({'train loss': train_loss,
+                       'train accuracy': train_accuracy * 100,
+                       'validation loss': val_loss,
+                       'validation accuracy': val_accuracy * 100,
+                       'epoch': epoch
+                       })
