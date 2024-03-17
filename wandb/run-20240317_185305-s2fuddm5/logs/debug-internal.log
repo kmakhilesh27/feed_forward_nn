@@ -1,0 +1,799 @@
+2024-03-17 18:53:05,226 INFO    StreamThr :71936 [internal.py:wandb_internal():86] W&B internal server running at pid: 71936, started at: 2024-03-17 18:53:05.226027
+2024-03-17 18:53:05,227 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status
+2024-03-17 18:53:05,239 INFO    WriterThread:71936 [datastore.py:open_for_write():87] open: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/run-s2fuddm5.wandb
+2024-03-17 18:53:05,240 DEBUG   SenderThread:71936 [sender.py:send():378] send: header
+2024-03-17 18:53:05,245 DEBUG   SenderThread:71936 [sender.py:send():378] send: run
+2024-03-17 18:53:06,035 INFO    SenderThread:71936 [dir_watcher.py:__init__():211] watching files in: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files
+2024-03-17 18:53:06,035 INFO    SenderThread:71936 [sender.py:_start_run_threads():1099] run started: s2fuddm5 with start time 1710681785.225156
+2024-03-17 18:53:06,046 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: check_version
+2024-03-17 18:53:06,047 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: check_version
+2024-03-17 18:53:06,203 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: run_start
+2024-03-17 18:53:06,207 DEBUG   HandlerThread:71936 [system_info.py:__init__():26] System info init
+2024-03-17 18:53:06,207 DEBUG   HandlerThread:71936 [system_info.py:__init__():41] System info init done
+2024-03-17 18:53:06,207 INFO    HandlerThread:71936 [system_monitor.py:start():194] Starting system monitor
+2024-03-17 18:53:06,208 INFO    SystemMonitor:71936 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-17 18:53:06,208 INFO    HandlerThread:71936 [system_monitor.py:probe():214] Collecting system info
+2024-03-17 18:53:06,209 INFO    SystemMonitor:71936 [interfaces.py:start():190] Started cpu monitoring
+2024-03-17 18:53:06,209 INFO    SystemMonitor:71936 [interfaces.py:start():190] Started disk monitoring
+2024-03-17 18:53:06,210 INFO    SystemMonitor:71936 [interfaces.py:start():190] Started gpu monitoring
+2024-03-17 18:53:06,210 INFO    SystemMonitor:71936 [interfaces.py:start():190] Started memory monitoring
+2024-03-17 18:53:06,212 INFO    SystemMonitor:71936 [interfaces.py:start():190] Started network monitoring
+2024-03-17 18:53:06,216 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:06,216 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:06,216 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:06,216 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:06,236 DEBUG   HandlerThread:71936 [system_info.py:probe():150] Probing system
+2024-03-17 18:53:06,238 DEBUG   HandlerThread:71936 [system_info.py:_probe_git():135] Probing git
+2024-03-17 18:53:06,244 DEBUG   HandlerThread:71936 [system_info.py:_probe_git():143] Probing git done
+2024-03-17 18:53:06,244 DEBUG   HandlerThread:71936 [system_info.py:probe():198] Probing system done
+2024-03-17 18:53:06,244 DEBUG   HandlerThread:71936 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-100-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-03-17T13:23:06.236408', 'startedAt': '2024-03-17T13:23:05.214142', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/hyperparams_sweep.py', 'codePathLocal': 'hyperparams_sweep.py', 'codePath': 'hyperparams_sweep.py', 'git': {'remote': 'https://github.com/akhileshkumar07/CS6910-Deep-Learning.git', 'commit': 'b9141a20ce00e28af8fcaa778bc69595d8bc17c8'}, 'email': 'akhilesh.kumar070197@gmail.com', 'root': '/home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning', 'host': 'Inspiron-5558', 'username': 'akhilesh', 'executable': '/usr/bin/python3', 'cpu_count': 2, 'cpu_count_logical': 4, 'cpu_freq': {'current': 2.6465000000000005, 'min': 500.0, 'max': 2700.0}, 'cpu_freq_per_core': [{'current': 2.7, 'min': 500.0, 'max': 2700.0}, {'current': 2.7, 'min': 500.0, 'max': 2700.0}, {'current': 2.486, 'min': 500.0, 'max': 2700.0}, {'current': 2.7, 'min': 500.0, 'max': 2700.0}], 'disk': {'/': {'total': 233.17998886108398, 'used': 37.370826721191406}}, 'gpu': 'NVIDIA GeForce 920M', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce 920M', 'memory_total': 2101739520}], 'memory': {'total': 7.6638031005859375}}
+2024-03-17 18:53:06,244 INFO    HandlerThread:71936 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-17 18:53:06,244 INFO    HandlerThread:71936 [system_monitor.py:probe():227] Publishing system info
+2024-03-17 18:53:06,245 INFO    HandlerThread:71936 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-17 18:53:06,250 DEBUG   SenderThread:71936 [sender.py:send():378] send: files
+2024-03-17 18:53:06,250 INFO    SenderThread:71936 [sender.py:_save_file():1365] saving file wandb-metadata.json with policy now
+2024-03-17 18:53:06,525 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: python_packages
+2024-03-17 18:53:06,526 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: python_packages
+2024-03-17 18:53:06,527 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:53:06,527 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:53:06,531 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:53:07,026 DEBUG   SenderThread:71936 [sender.py:send():378] send: telemetry
+2024-03-17 18:53:07,026 DEBUG   SenderThread:71936 [sender.py:send():378] send: telemetry
+2024-03-17 18:53:07,026 DEBUG   SenderThread:71936 [sender.py:send():378] send: telemetry
+2024-03-17 18:53:07,027 DEBUG   SenderThread:71936 [sender.py:send():378] send: run
+2024-03-17 18:53:07,045 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_created():271] file/dir created: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/requirements.txt
+2024-03-17 18:53:07,046 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_created():271] file/dir created: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-metadata.json
+2024-03-17 18:53:07,364 INFO    SenderThread:71936 [sender.py:send_run():973] updated run: s2fuddm5
+2024-03-17 18:53:07,406 INFO    wandb-upload_0:71936 [upload_job.py:push():131] Uploaded file /tmp/tmpjb0hjoalwandb/ytf0f0od-wandb-metadata.json
+2024-03-17 18:53:08,041 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/config.yaml
+2024-03-17 18:53:08,042 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_created():271] file/dir created: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:08,217 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:08,217 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:08,217 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:08,217 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:10,042 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:10,218 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:10,218 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:10,218 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:10,218 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:10,409 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:12,043 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:12,219 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:12,219 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:12,220 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:12,220 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:14,044 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:14,220 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:14,221 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:14,221 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:14,221 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:15,517 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:16,044 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:16,222 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:16,222 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:16,222 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:16,222 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:18,045 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:18,223 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:18,223 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:18,224 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:18,224 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:20,046 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:20,225 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:20,225 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:20,225 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:20,225 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:20,584 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:21,529 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:53:21,530 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:53:21,531 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:53:22,048 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:22,226 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:22,226 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:22,226 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:22,227 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:24,049 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:24,227 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:24,227 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:24,228 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:24,228 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:25,598 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:26,050 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:26,229 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:26,229 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:26,229 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:26,229 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:28,051 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:28,230 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:28,230 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:28,231 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:28,231 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:30,052 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:30,231 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:30,232 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:30,232 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:30,232 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:30,787 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:32,053 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:32,233 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:32,233 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:32,233 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:32,233 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:34,054 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:34,234 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:34,234 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:34,235 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:34,235 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:35,801 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:36,055 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:36,252 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:53:36,268 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:53:36,287 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:53:36,287 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-17 18:53:36,287 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:36,287 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:36,288 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:36,288 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:36,528 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:53:36,528 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:53:36,534 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:53:37,055 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/config.yaml
+2024-03-17 18:53:38,056 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:38,288 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:38,289 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:38,289 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:38,289 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:39,346 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 18:53:39,358 DEBUG   SenderThread:71936 [sender.py:send():378] send: history
+2024-03-17 18:53:39,359 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 18:53:39,359 INFO    SenderThread:71936 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 18:53:40,057 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:40,058 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_created():271] file/dir created: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-summary.json
+2024-03-17 18:53:40,290 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:40,290 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:40,290 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:40,291 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:41,199 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:42,058 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:42,291 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:42,292 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:42,292 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:42,292 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:44,059 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:44,293 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:44,293 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:44,293 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:44,293 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:46,059 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:46,294 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:46,294 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:46,294 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:46,295 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:46,330 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:48,060 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:48,295 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:48,295 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:48,296 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:48,296 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:50,061 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:50,296 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:50,297 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:50,297 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:50,297 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:51,482 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:51,528 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:53:51,529 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:53:51,534 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:53:52,062 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:52,298 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:52,298 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:52,298 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:52,299 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:54,063 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:54,299 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:54,299 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:54,300 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:54,300 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:56,065 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:56,300 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:56,301 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:56,301 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:56,301 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:56,551 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:53:58,066 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:53:58,302 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:58,302 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:58,302 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:53:58,302 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:00,066 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:00,303 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:00,304 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:00,304 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:00,304 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:01,620 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:02,067 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:02,305 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:02,305 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:02,305 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:02,305 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:04,068 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:04,306 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:04,306 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:04,306 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:04,307 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:06,069 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:06,212 DEBUG   SystemMonitor:71936 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-03-17 18:54:06,213 DEBUG   SenderThread:71936 [sender.py:send():378] send: stats
+2024-03-17 18:54:06,321 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:54:06,343 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:54:06,357 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:54:06,357 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-17 18:54:06,357 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:06,358 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:06,358 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:06,358 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:06,529 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:54:06,530 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:54:06,533 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:54:06,959 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:08,070 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:08,359 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:08,359 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:08,359 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:08,359 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:10,071 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:10,360 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:10,360 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:10,360 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:10,361 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:12,072 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:12,137 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:12,361 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:12,362 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:12,362 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:12,362 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:14,073 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:14,363 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:14,363 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:14,363 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:14,364 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:16,074 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:16,364 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:16,365 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:16,365 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:16,365 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:17,348 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:17,348 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 18:54:17,350 DEBUG   SenderThread:71936 [sender.py:send():378] send: history
+2024-03-17 18:54:17,350 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 18:54:17,357 INFO    SenderThread:71936 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 18:54:18,076 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:18,076 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-summary.json
+2024-03-17 18:54:18,366 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:18,366 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:18,367 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:18,367 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:20,076 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:20,368 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:20,368 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:20,368 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:20,368 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:21,534 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:54:21,535 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:54:21,540 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:54:22,078 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:22,369 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:22,369 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:22,370 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:22,370 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:22,396 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:24,079 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:24,371 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:24,371 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:24,372 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:24,372 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:26,079 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:26,372 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:26,373 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:26,373 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:26,373 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:27,399 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:28,081 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:28,374 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:28,374 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:28,374 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:28,374 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:30,082 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:30,375 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:30,375 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:30,375 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:30,376 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:32,083 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:32,376 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:32,376 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:32,377 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:32,377 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:32,427 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:34,084 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:34,377 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:34,378 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:34,378 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:34,378 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:36,085 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:36,214 DEBUG   SenderThread:71936 [sender.py:send():378] send: stats
+2024-03-17 18:54:36,392 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:54:36,408 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:54:36,422 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:54:36,423 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-17 18:54:36,423 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:36,423 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:36,423 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:36,424 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:36,534 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:54:36,535 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:54:36,539 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:54:37,467 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:38,086 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:38,424 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:38,425 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:38,425 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:38,425 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:40,087 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:40,426 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:40,427 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:40,427 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:40,428 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:42,088 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:42,429 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:42,429 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:42,429 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:42,429 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:42,484 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:44,089 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:44,431 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:44,431 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:44,432 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:44,432 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:46,090 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:46,433 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:46,433 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:46,433 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:46,433 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:47,601 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:48,091 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:48,434 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:48,434 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:48,435 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:48,435 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:50,092 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:50,436 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:50,436 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:50,436 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:50,436 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:51,538 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:54:51,539 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:54:51,542 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:54:52,093 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:52,437 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:52,438 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:52,438 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:52,438 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:52,606 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:54,094 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:54,439 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:54,439 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:54,440 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:54,440 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:55,114 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 18:54:55,115 DEBUG   SenderThread:71936 [sender.py:send():378] send: history
+2024-03-17 18:54:55,116 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 18:54:55,117 INFO    SenderThread:71936 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 18:54:56,095 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:56,095 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-summary.json
+2024-03-17 18:54:56,441 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:56,442 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:56,442 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:56,442 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:57,708 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:54:58,096 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:54:58,443 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:58,443 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:58,443 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:54:58,444 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:00,096 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:00,445 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:00,445 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:00,446 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:00,446 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:02,099 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:02,447 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:02,447 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:02,448 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:02,448 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:02,726 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:04,100 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:04,448 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:04,449 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:04,449 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:04,449 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:06,101 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:06,215 DEBUG   SenderThread:71936 [sender.py:send():378] send: stats
+2024-03-17 18:55:06,467 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:55:06,481 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:55:06,495 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:55:06,495 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-17 18:55:06,495 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:06,495 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:06,496 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:06,496 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:06,541 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:55:06,542 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:55:06,542 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:55:07,728 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:08,102 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:08,496 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:08,497 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:08,497 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:08,497 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:10,103 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:10,498 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:10,498 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:10,498 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:10,499 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:12,105 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:12,499 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:12,500 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:12,500 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:12,500 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:12,850 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:14,106 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:14,501 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:14,501 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:14,502 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:14,502 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:16,107 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:16,502 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:16,503 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:16,503 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:16,503 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:17,895 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:18,108 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:18,504 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:18,504 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:18,505 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:18,505 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:20,109 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:20,506 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:20,506 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:20,506 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:20,506 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:21,539 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:55:21,540 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:55:21,544 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:55:22,110 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:22,507 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:22,507 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:22,508 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:22,508 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:23,042 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:24,111 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:24,508 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:24,509 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:24,509 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:24,509 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:26,113 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:26,510 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:26,510 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:26,510 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:26,510 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:28,115 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:28,131 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:28,511 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:28,511 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:28,512 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:28,512 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:30,115 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:30,513 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:30,514 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:30,514 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:30,514 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:32,116 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:32,515 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:32,515 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:32,516 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:32,516 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:33,203 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:34,118 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:34,516 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:34,517 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:34,517 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:34,517 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:36,119 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:36,216 DEBUG   SenderThread:71936 [sender.py:send():378] send: stats
+2024-03-17 18:55:36,533 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:55:36,539 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:55:36,540 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:55:36,544 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:55:36,556 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:55:36,572 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:55:36,572 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-17 18:55:36,572 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:36,573 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:36,573 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:36,573 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:38,120 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:38,219 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:38,574 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:38,574 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:38,574 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:38,574 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:40,121 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:40,575 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:40,575 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:40,575 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:40,576 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:40,727 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 18:55:40,728 DEBUG   SenderThread:71936 [sender.py:send():378] send: history
+2024-03-17 18:55:40,728 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 18:55:40,729 INFO    SenderThread:71936 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 18:55:41,122 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-summary.json
+2024-03-17 18:55:42,122 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:42,576 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:42,576 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:42,577 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:42,577 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:43,224 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:44,123 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:44,578 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:44,578 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:44,578 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:44,578 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:46,125 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:46,579 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:46,580 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:46,580 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:46,580 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:48,126 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:48,271 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:48,582 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:48,582 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:48,583 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:48,583 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:50,127 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:50,584 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:50,584 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:50,584 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:50,584 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:51,539 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:55:51,540 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:55:51,550 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:55:52,128 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:52,585 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:52,585 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:52,586 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:52,586 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:53,280 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:54,129 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:54,587 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:54,587 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:54,588 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:54,588 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:56,130 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:56,589 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:56,589 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:56,589 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:56,589 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:58,132 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:55:58,317 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:55:58,590 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:58,590 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:58,590 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:55:58,591 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:00,133 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:00,591 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:00,591 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:00,592 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:00,592 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:02,134 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:02,592 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:02,593 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:02,593 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:02,593 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:03,428 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:56:04,135 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:04,594 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:04,594 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:04,594 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:04,595 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:06,136 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:06,217 DEBUG   SenderThread:71936 [sender.py:send():378] send: stats
+2024-03-17 18:56:06,539 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-17 18:56:06,540 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: stop_status
+2024-03-17 18:56:06,543 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:56:06,615 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:56:06,630 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:56:06,642 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:56:06,643 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-17 18:56:06,643 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:06,643 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:06,644 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:06,644 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:08,137 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:08,449 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:56:08,644 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:08,645 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:08,645 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:08,645 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:10,138 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:10,646 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:10,647 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:10,647 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:10,647 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:12,139 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:12,647 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:12,648 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:12,648 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:12,648 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:13,557 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:56:14,142 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:14,651 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:14,651 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:14,651 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:14,652 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:16,143 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:16,652 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:16,652 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:16,653 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:16,653 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:18,144 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:18,654 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:18,654 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:18,655 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:18,655 ERROR   gpu       :71936 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-17 18:56:18,792 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:56:18,795 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: partial_history
+2024-03-17 18:56:18,796 DEBUG   SenderThread:71936 [sender.py:send():378] send: history
+2024-03-17 18:56:18,797 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: summary_record
+2024-03-17 18:56:18,798 INFO    SenderThread:71936 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 18:56:19,144 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-summary.json
+2024-03-17 18:56:19,253 DEBUG   SenderThread:71936 [sender.py:send():378] send: telemetry
+2024-03-17 18:56:19,256 DEBUG   SenderThread:71936 [sender.py:send():378] send: exit
+2024-03-17 18:56:19,256 INFO    SenderThread:71936 [sender.py:send_exit():585] handling exit code: 0
+2024-03-17 18:56:19,256 INFO    SenderThread:71936 [sender.py:send_exit():587] handling runtime: 193
+2024-03-17 18:56:19,257 INFO    SenderThread:71936 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 18:56:19,257 INFO    SenderThread:71936 [sender.py:send_exit():593] send defer
+2024-03-17 18:56:19,257 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:19,258 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 0
+2024-03-17 18:56:19,258 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:19,258 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-03-17 18:56:19,258 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 1
+2024-03-17 18:56:19,259 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:19,259 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 1
+2024-03-17 18:56:19,259 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:19,259 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-03-17 18:56:19,259 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 2
+2024-03-17 18:56:19,260 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:19,260 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 2
+2024-03-17 18:56:19,260 INFO    HandlerThread:71936 [system_monitor.py:finish():203] Stopping system monitor
+2024-03-17 18:56:19,260 DEBUG   SystemMonitor:71936 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-03-17 18:56:19,260 DEBUG   SystemMonitor:71936 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-03-17 18:56:19,261 INFO    HandlerThread:71936 [interfaces.py:finish():202] Joined cpu monitor
+2024-03-17 18:56:19,261 INFO    HandlerThread:71936 [interfaces.py:finish():202] Joined disk monitor
+2024-03-17 18:56:19,274 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:56:19,282 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:56:19,293 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: Not Supported
+2024-03-17 18:56:19,293 ERROR   gpu       :71936 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-17 18:56:19,293 INFO    HandlerThread:71936 [interfaces.py:finish():202] Joined gpu monitor
+2024-03-17 18:56:19,293 INFO    HandlerThread:71936 [interfaces.py:finish():202] Joined memory monitor
+2024-03-17 18:56:19,294 INFO    HandlerThread:71936 [interfaces.py:finish():202] Joined network monitor
+2024-03-17 18:56:19,294 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:19,294 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-03-17 18:56:19,294 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 3
+2024-03-17 18:56:19,294 DEBUG   SenderThread:71936 [sender.py:send():378] send: stats
+2024-03-17 18:56:19,295 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:19,295 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 3
+2024-03-17 18:56:19,295 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:19,295 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-03-17 18:56:19,295 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 4
+2024-03-17 18:56:19,295 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:19,295 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 4
+2024-03-17 18:56:19,296 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:19,296 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-03-17 18:56:19,296 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 5
+2024-03-17 18:56:19,296 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:19,296 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 5
+2024-03-17 18:56:19,296 DEBUG   SenderThread:71936 [sender.py:send():378] send: summary
+2024-03-17 18:56:19,297 INFO    SenderThread:71936 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-03-17 18:56:19,297 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:19,297 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-03-17 18:56:19,297 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 6
+2024-03-17 18:56:19,297 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:19,297 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 6
+2024-03-17 18:56:19,298 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:19,298 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-03-17 18:56:19,303 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:56:19,678 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 7
+2024-03-17 18:56:19,679 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:19,679 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 7
+2024-03-17 18:56:19,679 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:19,679 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-03-17 18:56:20,145 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:20,145 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-summary.json
+2024-03-17 18:56:20,146 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/config.yaml
+2024-03-17 18:56:20,256 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-17 18:56:21,510 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 8
+2024-03-17 18:56:21,511 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: poll_exit
+2024-03-17 18:56:21,511 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:21,512 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 8
+2024-03-17 18:56:21,512 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:21,513 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-03-17 18:56:21,513 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 9
+2024-03-17 18:56:21,513 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:21,514 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 9
+2024-03-17 18:56:21,514 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:21,515 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-03-17 18:56:21,515 INFO    SenderThread:71936 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-03-17 18:56:22,146 INFO    Thread-12 :71936 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:22,148 INFO    SenderThread:71936 [dir_watcher.py:finish():388] scan: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files
+2024-03-17 18:56:22,148 INFO    SenderThread:71936 [dir_watcher.py:finish():402] scan save: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/requirements.txt requirements.txt
+2024-03-17 18:56:22,149 INFO    SenderThread:71936 [dir_watcher.py:finish():402] scan save: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log output.log
+2024-03-17 18:56:22,150 INFO    SenderThread:71936 [dir_watcher.py:finish():402] scan save: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/config.yaml config.yaml
+2024-03-17 18:56:22,156 INFO    SenderThread:71936 [dir_watcher.py:finish():402] scan save: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-metadata.json wandb-metadata.json
+2024-03-17 18:56:22,157 INFO    SenderThread:71936 [dir_watcher.py:finish():402] scan save: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-summary.json wandb-summary.json
+2024-03-17 18:56:22,157 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 10
+2024-03-17 18:56:22,157 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:22,157 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 10
+2024-03-17 18:56:22,162 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:22,162 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-03-17 18:56:22,162 INFO    SenderThread:71936 [file_pusher.py:finish():172] shutting down file pusher
+2024-03-17 18:56:22,257 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-17 18:56:22,257 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: poll_exit
+2024-03-17 18:56:22,879 INFO    wandb-upload_0:71936 [upload_job.py:push():131] Uploaded file /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/requirements.txt
+2024-03-17 18:56:23,148 INFO    wandb-upload_3:71936 [upload_job.py:push():131] Uploaded file /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/wandb-summary.json
+2024-03-17 18:56:23,149 INFO    wandb-upload_1:71936 [upload_job.py:push():131] Uploaded file /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/output.log
+2024-03-17 18:56:23,150 INFO    wandb-upload_2:71936 [upload_job.py:push():131] Uploaded file /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/files/config.yaml
+2024-03-17 18:56:23,258 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-17 18:56:23,258 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: poll_exit
+2024-03-17 18:56:23,351 INFO    Thread-11 (_thread_body):71936 [sender.py:transition_state():613] send defer: 11
+2024-03-17 18:56:23,351 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:23,351 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 11
+2024-03-17 18:56:23,352 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:23,352 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-03-17 18:56:23,352 INFO    SenderThread:71936 [file_pusher.py:join():178] waiting for file pusher
+2024-03-17 18:56:23,353 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 12
+2024-03-17 18:56:23,353 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:23,353 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 12
+2024-03-17 18:56:23,353 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:23,354 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-03-17 18:56:23,354 INFO    SenderThread:71936 [file_stream.py:finish():595] file stream finish called
+2024-03-17 18:56:24,259 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-17 18:56:24,376 INFO    SenderThread:71936 [file_stream.py:finish():599] file stream finish is done
+2024-03-17 18:56:24,377 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 13
+2024-03-17 18:56:24,377 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: poll_exit
+2024-03-17 18:56:24,377 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:24,377 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 13
+2024-03-17 18:56:24,377 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: status_report
+2024-03-17 18:56:24,378 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:24,378 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-03-17 18:56:24,378 INFO    SenderThread:71936 [sender.py:transition_state():613] send defer: 14
+2024-03-17 18:56:24,378 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: defer
+2024-03-17 18:56:24,378 INFO    HandlerThread:71936 [handler.py:handle_request_defer():172] handle defer: 14
+2024-03-17 18:56:24,379 DEBUG   SenderThread:71936 [sender.py:send():378] send: final
+2024-03-17 18:56:24,379 DEBUG   SenderThread:71936 [sender.py:send():378] send: footer
+2024-03-17 18:56:24,379 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: defer
+2024-03-17 18:56:24,379 INFO    SenderThread:71936 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-03-17 18:56:24,380 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: poll_exit
+2024-03-17 18:56:24,380 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: poll_exit
+2024-03-17 18:56:24,381 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-17 18:56:24,382 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: server_info
+2024-03-17 18:56:24,382 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: server_info
+2024-03-17 18:56:24,426 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: get_summary
+2024-03-17 18:56:24,426 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: sampled_history
+2024-03-17 18:56:24,426 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: job_info
+2024-03-17 18:56:24,684 DEBUG   SenderThread:71936 [sender.py:send_request():405] send_request: job_info
+2024-03-17 18:56:24,685 DEBUG   HandlerThread:71936 [handler.py:handle_request():146] handle_request: shutdown
+2024-03-17 18:56:24,685 INFO    HandlerThread:71936 [handler.py:finish():869] shutting down handler
+2024-03-17 18:56:25,427 INFO    WriterThread:71936 [datastore.py:close():296] close: /home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/wandb/run-20240317_185305-s2fuddm5/run-s2fuddm5.wandb
+2024-03-17 18:56:25,684 INFO    SenderThread:71936 [sender.py:finish():1521] shutting down sender
+2024-03-17 18:56:25,685 INFO    SenderThread:71936 [file_pusher.py:finish():172] shutting down file pusher
+2024-03-17 18:56:25,685 INFO    SenderThread:71936 [file_pusher.py:join():178] waiting for file pusher

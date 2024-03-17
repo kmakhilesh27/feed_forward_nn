@@ -1,0 +1,68 @@
+{
+    "os": "Linux-5.15.0-100-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-03-17T13:08:04.425776",
+    "startedAt": "2024-03-17T13:08:03.298715",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning/hyperparams_sweep.py",
+    "codePathLocal": "hyperparams_sweep.py",
+    "codePath": "hyperparams_sweep.py",
+    "git": {
+        "remote": "https://github.com/akhileshkumar07/CS6910-Deep-Learning.git",
+        "commit": "b9141a20ce00e28af8fcaa778bc69595d8bc17c8"
+    },
+    "email": "akhilesh.kumar070197@gmail.com",
+    "root": "/home/akhilesh/Academics - Semester II/CS6910 - Deep Learning/CS6910-Deep-Learning",
+    "host": "Inspiron-5558",
+    "username": "akhilesh",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2.4015,
+        "min": 500.0,
+        "max": 2700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2.7,
+            "min": 500.0,
+            "max": 2700.0
+        },
+        {
+            "current": 2.333,
+            "min": 500.0,
+            "max": 2700.0
+        },
+        {
+            "current": 2.269,
+            "min": 500.0,
+            "max": 2700.0
+        },
+        {
+            "current": 2.7,
+            "min": 500.0,
+            "max": 2700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 233.17998886108398,
+            "used": 37.36454391479492
+        }
+    },
+    "gpu": "NVIDIA GeForce 920M",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce 920M",
+            "memory_total": 2101739520
+        }
+    ],
+    "memory": {
+        "total": 7.6638031005859375
+    }
+}

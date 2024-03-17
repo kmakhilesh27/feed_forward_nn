@@ -4,18 +4,18 @@ from argparser import create_parser
 import neural_network as nn
 
 sweep_config = {
-        'method': 'grid',
+        'method': 'bayes',
         'name' : 'complete-hyperparameter-sweep',
         'metric': {
-            'name': 'val_accuracy',
+            'name': 'validation accuracy',
             'goal': 'maximize'
             },
         'parameters': {
             'epochs': {'values': [5,10]},
-            'num_layers': {'values': [3,4,5]},
+            'num_layers': {'values': [3,4]},
             'hidden_size':{'values':[32,64,128]},
             'learning_rate': {'values': [1e-3, 1e-4]},
-            'optimizer': {'values': ['sgd','momentum','nesterov','rmsprop','adam','nadam']},
+            'optimizer': {'values': ['sgd','momentum','nesterov','rmsprop','adam', 'nadam']},
             'batch_size': {'values': [16,32,64]},
             'weight_init': {'values':['random','xavier']},                
             'activation': {'values': ['sigmoid','tanh','relu']},
@@ -54,12 +54,13 @@ def wandb_runner(config = sweep_config, usr_args = args):
                     beta2 = usr_args['beta2'],
                     eps = usr_args['epsilon'],
                     weight_decay = usr_args['weight_decay'],
-                    activationfn = usr_args['activation']
+                    activationfn = usr_args['activation'],
+                    use_wandb = True
                     )
         model.predict(x_test, y_test, config.activation)
 
 x_train, y_train , x_test, y_test = load_and_process_dataset(choice = args['dataset'])
 
 sweep_id = wandb.sweep(sweep=sweep_config, project='CS6910_Assignment_1')   
-wandb.agent(sweep_id, function=wandb_runner, count = 10)
+wandb.agent(sweep_id, function=wandb_runner, count=20)
 wandb.finish()
