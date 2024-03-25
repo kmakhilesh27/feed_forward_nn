@@ -1,7 +1,6 @@
 # CS6910: Fundamentals of Deep Learning - Jan May 2024 - IITM
 ## Assignment 1 - Feed Forward Neural Networks
 
-## Feed Forward Neural Network: neural_network.py
 
 This file contains the implementation of a FeedForward Neural Network (FFNN) in Python using NumPy. 
 
