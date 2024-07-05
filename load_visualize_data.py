@@ -24,6 +24,6 @@ def visualize_dataset(x_train, y_train):
     plt.show()
     wandb.log({"run_visualization": [wandb.Image(img, caption=caption) for img, caption in zip(images, labels)]})
 
-if __name__=="__main__":
-    (x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
-    visualize_dataset(x_train, y_train)
+
+(x_train, y_train), (x_test, y_test) = fashion_mnist.load_data()
+visualize_dataset(x_train, y_train)

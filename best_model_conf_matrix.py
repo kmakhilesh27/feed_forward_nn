@@ -1,23 +1,17 @@
-from dataloader import load_and_process_dataset
-from argparser import create_parser
+import dataloader
 import neural_network as nn
-
 import matplotlib.pyplot as plt
 import numpy as np
-
 from sklearn.metrics import confusion_matrix
-import wandb, io
+import wandb
 
-parser = create_parser()
-args = vars(parser.parse_args())
-
-"""
+# best set of hyperparameters
 args = {'wandb_project': 'CS6910_Assignment_1', 'wandb_entity': 'ge23m019', 'dataset': 'fashion_mnist',
-'epochs': 1, 'batch_size': 4, 'loss': 'cross_entropy', 'optimizer': 'sgd', 'learning_rate': 0.1,
+'epochs': 10, 'batch_size': 64, 'loss': 'cross_entropy', 'optimizer': 'adam', 'learning_rate': 0.001,
 'momentum': 0.5, 'beta': 0.5, 'beta1': 0.5, 'beta2': 0.5, 'epsilon': 1e-06, 'weight_decay': 0.0,
-'weight_init': 'random', 'num_layers': 1, 'hidden_size': 4, 'activation': 'sigmoid'}
-"""
-x_train, y_train , x_test, y_test = load_and_process_dataset(choice = args['dataset'])
+'weight_init': 'xavier', 'num_layers': 4, 'hidden_size': 128, 'activation': 'relu'}
+
+x_train, y_train , x_test, y_test = dataloader.load_and_process_dataset(choice = args['dataset'])
 
 model = nn.FeedForwardNN(input_size=784, num_hidden_layers=args['num_layers'],
                              hidden_size=args['hidden_size'], output_size=10,
@@ -39,8 +33,8 @@ model.train(x_train, y_train,
                     )
 y_test_pred = model.predict(x_test, y_test,args['activation'])
 
-y_test_pred_decoded = []
-y_test_decoded = []
+y_test_pred_decoded = [] # reconstructed scalar outputs from one hot encoding for predictions on test set
+y_test_decoded = [] # reconstructed scalar outputs from one hot encoding for ground truth on test set
 for i in range(len(y_test_pred)):
     y_test_pred_decoded.append(np.argmax(y_test_pred[i]))
     y_test_decoded.append(np.argmax(y_test[i]))
@@ -60,13 +54,11 @@ def plot_confusion_matrix(y_true, y_pred, class_names, title=None, cmap=plt.cm.B
     
     for i in range(cm.shape[0]):
         for j in range(cm.shape[1]):
-            plt.text(j, i, format(cm[i, j], 'd'),
-                     ha="center", va="center"
-                     )
+            plt.text(j, i, format(cm[i, j], 'd'), ha="center", va="center")
 
     plt.tight_layout()
-    plt.ylabel('True Labels')
-    plt.xlabel('Predicted Labels')
+    plt.ylabel('True Classes')
+    plt.xlabel('Predicted Classes')
     plt.show()    
 
 class_names = ['T-Shirt/Top', 'Trouser', 'Pullover', 'Dress', 'Coat',
@@ -82,5 +74,3 @@ wandb.log({"confusion_matrix": wandb.plot.confusion_matrix(
     y_true=y_test_decoded,
     preds=y_test_pred_decoded,
     class_names=class_names)})
-
-

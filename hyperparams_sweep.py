@@ -1,6 +1,5 @@
 import wandb
-from dataloader import load_and_process_dataset
-from argparser import create_parser
+import dataloader, argparser
 import neural_network as nn
 
 sweep_config = {
@@ -23,7 +22,7 @@ sweep_config = {
             }
         }
 
-parser = create_parser()
+parser = argparser.create_parser()
 args = vars(parser.parse_args())
 
 def wandb_runner(config = sweep_config, usr_args = args):
@@ -56,10 +55,9 @@ def wandb_runner(config = sweep_config, usr_args = args):
                     weight_decay = usr_args['weight_decay'],
                     activationfn = usr_args['activation'],
                     use_wandb = True
-                    )
-        model.predict(x_test, y_test, config.activation)
+                    )        
 
-x_train, y_train , x_test, y_test = load_and_process_dataset(choice = args['dataset'])
+x_train, y_train , x_test, y_test = dataloader.load_and_process_dataset(choice = args['dataset'])
 
 sweep_id = wandb.sweep(sweep=sweep_config, project='CS6910_Assignment_1')   
 wandb.agent(sweep_id, function=wandb_runner, count=20)

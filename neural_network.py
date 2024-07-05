@@ -4,7 +4,8 @@ from tqdm import tqdm
 import wandb
 # Set the random seed for numpy for reproducibility
 np.random.seed(42)
- 
+
+# The Neural Network Class 
 class FeedForwardNN:
     
     def __init__(self, input_size:int, num_hidden_layers:int, hidden_size:int, output_size:int, weight_initializer):
